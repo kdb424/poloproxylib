@@ -176,7 +176,7 @@ def buy(coin, altcoin, rate, amt, fill_or_kill=False,
         immediate_or_cancel=False, post_only=False):
     '''Buy coins'''
     msg = mp.packb(['buy', [coin, altcoin, str(rate), str(amt),
-        fill_or_kill=False, immediate_or_cancel=False, post_only=False]])
+        fill_or_kill, immediate_or_cancel, post_only]])
     return send(msg)
 
 
